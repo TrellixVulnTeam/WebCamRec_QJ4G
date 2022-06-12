@@ -11,6 +11,9 @@ Public Class XCamera
         If cameras.ShowDialog = DialogResult.OK Then
             Me.Component = cameras.VideoDevice
             AddHandler Me.Component.NewFrame, New NewFrameEventHandler(AddressOf Me.OnNewFrame)
+        Else
+            MsgBox("No camera selected")
+            Application.Exit()
         End If
     End Sub
     Private Sub OnNewFrame(sender As Object, e As NewFrameEventArgs)

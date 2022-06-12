@@ -10,15 +10,28 @@
 
         Me.ImageProcessor = New Processor
 
+        'Filters - N/A
         'Statistics - Pink
         'Sub Components - Purple
         'Main Components - Red + Green
 
-        Me.ImageProcessor.AddComponent(New p_MotionDetectorComponent(20, 20))
+        'Order of Computation:
+
+        '1. Main Components
+
+        '2. Sub Components
+
+        '3. Filter Calculations
+
+        '4. Statistics
+
+        '5. Filter Output
+
+        Me.ImageProcessor.AddComponent(New p_MotionDetectorComponent(15, 15))
+        ' Me.ImageProcessor.AddComponent(New p_FaceMeshComponent)
+
         Me.ImageProcessor.AddComponent(New p_TimeComponent)
         Me.ImageProcessor.AddComponent(New p_LatencyComponent)
-
-        Me.ImageProcessor.AddComponent(New p_FaceMeshComponent)
 
         Me.OutputWindow = New PictureBox
         Me.OutputWindow.Size = Me.ClientSize

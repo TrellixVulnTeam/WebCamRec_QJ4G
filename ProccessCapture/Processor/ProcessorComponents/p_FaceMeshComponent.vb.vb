@@ -17,6 +17,9 @@ Public Class p_FaceMeshComponent
     Public Overrides Sub OnProcess(ImageIn As Bitmap)
         Me.Landmarks.Clear()
         '20 = precisionnumber
+
+        'UNRESOLVED !!!
+
         Dim Frame As New ImageFrame(ImageFormat.Srgba, ImageIn.Width, ImageIn.Height, 20, ImgToByteArr(ImageIn))
         Me.Calculator.Send(Frame)
     End Sub

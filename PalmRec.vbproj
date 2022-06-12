@@ -19,6 +19,7 @@
     <PackageReference Include="AForge.Video" Version="2.2.5" />
     <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
     <PackageReference Include="Mediapipe.Net" Version="0.8.10" />
+    <PackageReference Include="Mediapipe.Net.Runtime.CPU" Version="0.8.9.1" />
   </ItemGroup>
 
   <ItemGroup>

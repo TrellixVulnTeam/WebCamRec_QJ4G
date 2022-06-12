@@ -1,6 +1,7 @@
 ﻿Public Class Processor
     Public Camera As XCamera
     Private Components As List(Of ProcessorComponent)
+    Private Filters As List(Of ProcessorFilter) 'TBD
     Private ComponentProcessedCount As Integer
     Sub New()
         Me.Camera = New XCamera
