@@ -30,7 +30,6 @@
                     If Difference > Me.PrecisionValue Then
                         Me.DetectedPoints.Add(New Point(i, j))
                     End If
-
                 Next
             Next
             Me.Buffer.Dispose()
@@ -39,9 +38,8 @@
     End Sub
     Public Overrides Sub Draw(ByRef ImageIn As Bitmap)
         Using g As Graphics = Graphics.FromImage(ImageIn)
-            g.Clear(Color.Black)
             For Each P As Point In Me.DetectedPoints
-                DrawCircle(g, P.X, P.Y, Me.StepValue / 6)
+                DrawCircle(g, P.X, P.Y, Me.StepValue / 4)
             Next
 
             g.DrawString("Motion Points Detected: " & Me.DetectedPoints.Count,

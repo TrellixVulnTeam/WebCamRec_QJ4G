@@ -27,8 +27,15 @@
 
         '5. Filter Output
 
-        Me.ImageProcessor.AddComponent(New p_FaceMeshComponent)
-        Me.ImageProcessor.AddComponent(New p_HandsComponent)
+        '=================================================================================================
+
+        'Each component has a viewport where you can change settings in runtime - make tomorrow
+
+
+        'IMPORTANT !! Components do their drawing after all components have performed their calculations
+
+        ' Me.ImageProcessor.AddComponent(New p_FaceMeshComponent)
+        ' Me.ImageProcessor.AddComponent(New p_HandsComponent)
 
         Me.ImageProcessor.AddComponent(New p_MotionDetectorComponent(20, 20))
 
