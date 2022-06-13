@@ -1,5 +1,4 @@
 ﻿Imports Mediapipe.Net.Calculators
-Imports Mediapipe.Net.External
 Imports Mediapipe.Net.Framework.Format
 Imports Mediapipe.Net.Framework.Protobuf
 Public Class p_FaceMeshComponent
@@ -11,7 +10,7 @@ Public Class p_FaceMeshComponent
         Me.Calculator = New FaceMeshCpuCalculator
         Me.Converter = New ImageConverter
         Me.Landmarks = New List(Of NormalizedLandmarkList)
-        AddHandler Calculator.OnResult, AddressOf Me.ObtainLandmarks
+        AddHandler Me.Calculator.OnResult, AddressOf Me.ObtainLandmarks
         Me.Calculator.Run()
     End Sub
     Public Overrides Sub OnProcess(ImageIn As Bitmap)

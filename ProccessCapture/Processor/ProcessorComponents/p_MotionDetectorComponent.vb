@@ -39,8 +39,9 @@
     End Sub
     Public Overrides Sub Draw(ByRef ImageIn As Bitmap)
         Using g As Graphics = Graphics.FromImage(ImageIn)
+            g.Clear(Color.Black)
             For Each P As Point In Me.DetectedPoints
-                DrawCircle(g, P.X, P.Y, Me.StepValue / 4)
+                DrawCircle(g, P.X, P.Y, Me.StepValue / 6)
             Next
 
             g.DrawString("Motion Points Detected: " & Me.DetectedPoints.Count,

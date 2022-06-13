@@ -17,7 +17,6 @@
     Private Sub UpdateEnd()
         Me.Camera.RelayToOutputWindows()
     End Sub
-
     '==================================================
     Public Sub AddComponent(Component As ProcessorComponent)
         Me.Components.Add(Component)
@@ -30,7 +29,6 @@
         RemoveHandler Component.OnProcessEnd, AddressOf ComponentProcessEnd
     End Sub
     Public Sub RemoveComponentAt(index As Integer)
-        Dim Component As ProcessorComponent = Me.Components(index)
         Me.Components.RemoveAt(index)
     End Sub
 End Class

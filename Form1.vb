@@ -27,8 +27,10 @@
 
         '5. Filter Output
 
-        Me.ImageProcessor.AddComponent(New p_MotionDetectorComponent(15, 15))
-        ' Me.ImageProcessor.AddComponent(New p_FaceMeshComponent)
+        Me.ImageProcessor.AddComponent(New p_FaceMeshComponent)
+        Me.ImageProcessor.AddComponent(New p_HandsComponent)
+
+        Me.ImageProcessor.AddComponent(New p_MotionDetectorComponent(20, 20))
 
         Me.ImageProcessor.AddComponent(New p_TimeComponent)
         Me.ImageProcessor.AddComponent(New p_LatencyComponent)
